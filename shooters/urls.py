@@ -2,10 +2,12 @@ from django.conf import settings
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import include, path
+from django.views.generic import TemplateView
 
 urlpatterns = [
-    path(r'login/', auth_views.login, name='login'),
-    path(r'logout/', auth_views.logout, {'template_name': 'registration/logged_out.html'}, name='logout'),
+    path('', TemplateView.as_view(template_name="index.html")),
+    path('login/', auth_views.login, name='login'),
+    path('logout/', auth_views.logout, {'template_name': 'registration/logged_out.html'}, name='logout'),
     path('admin/', admin.site.urls),
     path('ranking', include('ranking.urls')),
 ]
