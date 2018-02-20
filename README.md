@@ -1,29 +1,10 @@
-# Django 2.0+ project template
+# Rangliste für Schiesswettkämpfe
 
-[![Dependency Status](https://gemnasium.com/jpadilla/django-project-template.svg)](https://gemnasium.com/jpadilla/django-project-template)
 
-This is a simple Django 2.0+ project template with my preferred setup. Most Django project templates make way too many assumptions or are just way too complicated. I try to make the least amount of assumptions possible while still trying provide a useful setup. Most of my projects are deployed to Heroku, so this is optimized for that but is not necessary.
-
-## Features
-
-- Django 2.0+
-- Uses [Pipenv](https://github.com/kennethreitz/pipenv) - the officially recommended Python packaging tool from Python.org.
-- Development, Staging and Production settings with [django-configurations](https://django-configurations.readthedocs.org).
-- Get value insight and debug information while on Development with [django-debug-toolbar](https://django-debug-toolbar.readthedocs.org).
-- Collection of custom extensions with [django-extensions](http://django-extensions.readthedocs.org).
-- HTTPS and other security related settings on Staging and Production.
-- Procfile for running gunicorn with New Relic's Python agent.
-- PostgreSQL database support with psycopg2.
 
 ## How to install
 
 ```bash
-$ django-admin.py startproject \
-  --template=https://github.com/jpadilla/django-project-template/archive/master.zip \
-  --name=Procfile \
-  --extension=py,md,env \
-  project_name
-$ mv example.env .env
 $ pipenv install --dev
 ```
 
