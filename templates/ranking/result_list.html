@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ match.name }} - Resultate{% endblock %}
+
+{% block content %}
+    <h2>{{ match.name }} {{ match.match_date | date:'Y' }} &mdash; Resultate</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th width="5%">Rang</th>
+                <th>Name</th>
+                <th width="5%">Resultat</th>
+                <th width="5%">Auszeichnung</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ result.shooter }}<br/><span class="text-muted">{{ result.shooter.organization }}</span></td>
+                <td align="right">{{ result.count }}</td>
+                <td>{% if result.count >= match.medal_limit %}<span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>{% endif %}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

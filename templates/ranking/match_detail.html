@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block meta_title %}Anlässe{% trans "Home" %}{% endblock %}
+
+{% block title %}Anlässe{% endblock %}
+
+{% block content %}
+    <h3 class="page-header">{{ event.name }}</h3>
+
+    <p class="text-muted">{{ event.description }}</p>
+    <p>
+        <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> {{ event.match_date | date:'d.m.Y' }}
+        <span class="text-muted">{{ event.organizer }}</span>
+    </p>
+    <p>
+        <b>Schützenmeister:</b> {{ event.supervisor | default:"N.N." }}
+        {% if request.user.shooter.is_supervisor %}
+        <a href="/events/{{ event.id }}/supervisor">[Dienst übernehmen]</a>
+        {% endif %}
+    </p>
+    {% if event.results.count > 0 %}
+    <p><a href="{% url 'result_detail' event_id=event.id %}">Resultate</a></p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block meta_title %}Externe Wettkämpfe{% trans "Home" %}{% endblock %}
+
+{% block title %}Anmeldung Externe Wettkämpfe{% endblock %}
+
+{% block content %}
+    <ul class="list-group">
+    {% for part in participations %}
+    <li class="list-group-item">
+        <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> {{ part.match.match_date | date:'d.m.Y' }}
+        <strong>{{ part.match.name }}</strong>&nbsp;
+        <span class="text-muted">{{ part.match.organizer }}</span>
+        <span class="pull-right"><a href="{% url 'unsubscribe_match' part_id=part.id %}">Abmelden</a>&nbsp;<i class="glyphicon glyphicon-remove text-danger"></i></span>
+    </li>
+    {% endfor %}
+
+
+    {% for event in remaining %}
+    <li class="list-group-item">
+        <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> {{ event.match_date | date:'d.m.Y' }}
+        <strong>{{ event.name }}</strong>&nbsp;
+        <span class="text-muted">{{ event.organizer }}</span>
+        <span class="pull-right"><a href="{% url 'subscribe_match' event_id=event.id %}">Teilnehmen</a></span>
+    </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

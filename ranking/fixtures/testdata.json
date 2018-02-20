@@ -1,0 +1,519 @@
+[
+{
+  "pk": 1, 
+  "model": "ranking.organization", 
+  "fields": {
+    "name": "Pistolensch\u00fctzen Niederg\u00f6sgen"
+  }
+},
+{
+  "pk": 2, 
+  "model": "ranking.organization", 
+  "fields": {
+    "name": "Eidgen\u00f6ssische Tell-Sch\u00fctzen"
+  }
+},
+{
+  "pk": 3, 
+  "model": "ranking.organization", 
+  "fields": {
+    "name": "Sch\u00fctzengesellschaft H\u00e4gendorf-Rickenbach"
+  }
+},
+{
+  "pk": 4, 
+  "model": "ranking.shooter", 
+  "fields": {
+    "family_name": "Tell", 
+    "first_name": "Wilhelm", 
+    "license_number": "1", 
+    "is_supervisor": true, 
+    "date_of_birth": "1307-08-01", 
+    "user": 2, 
+    "organization": 2
+  }
+},
+{
+  "pk": 7, 
+  "model": "ranking.shooter", 
+  "fields": {
+    "family_name": "Stauffacher", 
+    "first_name": "Werner", 
+    "license_number": "2", 
+    "is_supervisor": false, 
+    "date_of_birth": "1307-08-02", 
+    "user": null, 
+    "organization": 2
+  }
+},
+{
+  "pk": 8, 
+  "model": "ranking.shooter", 
+  "fields": {
+    "family_name": "F\u00fcrst", 
+    "first_name": "Walter", 
+    "license_number": "3", 
+    "is_supervisor": false, 
+    "date_of_birth": "1307-08-03", 
+    "user": null, 
+    "organization": 2
+  }
+},
+{
+  "pk": 9, 
+  "model": "ranking.shooter", 
+  "fields": {
+    "family_name": "von Melchtal", 
+    "first_name": "Arnold", 
+    "license_number": "4", 
+    "is_supervisor": false, 
+    "date_of_birth": "1307-08-04", 
+    "user": null, 
+    "organization": 2
+  }
+},
+{
+  "pk": 10, 
+  "model": "ranking.shooter", 
+  "fields": {
+    "family_name": "Baumgarten", 
+    "first_name": "Konrad", 
+    "license_number": "5", 
+    "is_supervisor": false, 
+    "date_of_birth": "1307-08-05", 
+    "user": null, 
+    "organization": 2
+  }
+},
+{
+  "pk": 2, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "20:00:00", 
+    "supervisor": null, 
+    "name": "Feldschiessen", 
+    "medal_limit": 159, 
+    "match_date": "2015-06-05", 
+    "organizer": 3, 
+    "description": ""
+  }
+},
+{
+  "pk": 4, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "12:00:00", 
+    "ends": "18:00:00", 
+    "supervisor": 4, 
+    "name": "Apfelschiessen", 
+    "medal_limit": 99, 
+    "match_date": "2015-03-25", 
+    "organizer": 2, 
+    "description": "Das ist eine Beispielveranstaltung"
+  }
+},
+{
+  "pk": 7, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-04-15", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 8, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-04-22", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 9, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-04-29", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 10, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-05-06", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 11, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-05-13", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 12, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-05-20", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 13, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-05-27", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 14, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-06-03", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 15, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-06-10", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 16, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-06-17", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 17, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-06-24", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 18, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-07-01", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 19, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-07-08", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 20, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-07-15", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 21, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-07-22", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 22, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-07-29", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 23, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-08-05", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 24, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-08-12", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 25, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-08-19", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 26, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-08-26", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 27, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-09-02", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 28, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-09-09", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 29, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-09-16", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 30, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-09-23", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 31, 
+  "model": "ranking.match", 
+  "fields": {
+    "begins": "17:30:00", 
+    "ends": "19:00:00", 
+    "supervisor": null, 
+    "name": "Training", 
+    "medal_limit": null, 
+    "match_date": "2015-09-30", 
+    "organizer": 1, 
+    "description": "Vom 1. April bis 7. Oktober 2015 trainieren wir jeden Mittwoch, 17.30 - 19.00 Uhr in der Schiessanlage \"Sieg\""
+  }
+},
+{
+  "pk": 1, 
+  "model": "ranking.participation", 
+  "fields": {
+    "shooter": 4, 
+    "match": 2
+  }
+},
+{
+  "pk": 1, 
+  "model": "ranking.result", 
+  "fields": {
+    "count": 165, 
+    "shooter": 4, 
+    "match": 2
+  }
+},
+{
+  "pk": 2, 
+  "model": "ranking.result", 
+  "fields": {
+    "count": 161, 
+    "shooter": 7, 
+    "match": 2
+  }
+},
+{
+  "pk": 3, 
+  "model": "ranking.result", 
+  "fields": {
+    "count": 179, 
+    "shooter": 9, 
+    "match": 2
+  }
+},
+{
+  "pk": 4, 
+  "model": "ranking.result", 
+  "fields": {
+    "count": 140, 
+    "shooter": 10, 
+    "match": 2
+  }
+},
+{
+  "pk": 5, 
+  "model": "ranking.result", 
+  "fields": {
+    "count": 96, 
+    "shooter": 4, 
+    "match": 16
+  }
+}
+]

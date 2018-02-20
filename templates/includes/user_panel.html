@@ -1,0 +1,16 @@
+{% load mezzanine_tags %}
+
+{% ifinstalled mezzanine.accounts %}
+<div class="panel panel-default user-panel">
+    <div class="panel-body">
+    {% include "accounts/includes/user_panel.html" %}
+    </div>
+
+    {% if user.is_authenticated %}
+    <ul class="list-group">
+        <li class="list-group-item"><a href="{% url 'external_matches' %}">Externe Anlässe</a></li>
+        <li class="list-group-item"><a href="{% url 'my_results' %}">Meine Resultate</a></li>
+    </ul>
+    {% endif %}
+</div>
+{% endifinstalled %}
