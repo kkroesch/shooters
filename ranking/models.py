@@ -78,12 +78,27 @@ class Participation(models.Model):
         verbose_name_plural = u'Teilnahmen'
 
 
+class Discipline(models.Model):
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name
+
+    class Meta():
+        verbose_name = u'Disziplin'
+        verbose_name_plural = u'Disziplinen'
+
+
 class Result(models.Model):
     """
     Represents a result for a shooter on a match.
     """
+
+    DISCIPLINES = list((d.name, d.name) for d in Discipline.objects.all())
+
     shooter = models.ForeignKey(Shooter, related_name='shooters', on_delete=models.DO_NOTHING)
     match = models.ForeignKey(Match, related_name='results', on_delete=models.DO_NOTHING)
+    discipline = models.CharField(max_length=255, choices=DISCIPLINES, default='(Training)')
     count = models.IntegerField()
 
     def earns_medal(self):

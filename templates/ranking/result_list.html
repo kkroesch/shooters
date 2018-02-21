@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ match.name }} - Resultate{% endblock %}
+{% block title %}{{ match.name }} {{ match.match_date | date:'Y' }} &mdash; Resultate{% endblock %}
 
 {% block content %}
-    <h2>{{ match.name }} {{ match.match_date | date:'Y' }} &mdash; Resultate</h2>
     <table class="table">
         <thead>
             <tr>

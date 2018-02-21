@@ -121,6 +121,8 @@ class Common(Configuration):
 
     AUTH_USER_MODEL = 'users.User'
 
+    LOGIN_REDIRECT_URL = '/ranking/my_results'
+
 
 class Development(Common):
     """

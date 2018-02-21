@@ -57,9 +57,8 @@ class MyResults(ListView):
     template_name = 'ranking/my_results.html'
 
     def get_queryset(self):
-        queryset = super(MyResults, self).get_queryset() \
-            .filter(shooter=self.request.user.shooter)
-        return queryset
+        return super(MyResults, self).get_queryset() \
+                .filter(shooter=self.request.user.shooter)
 
 
 class ExternalMatches(ListView):

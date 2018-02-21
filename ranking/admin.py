@@ -22,6 +22,10 @@ class ResultAdmin(admin.ModelAdmin):
     list_filter = ('match', 'shooter')
 
 
+class DisciplineAdmin(admin.ModelAdmin):
+    list_display = ('name', )
+
+
 class ParticipationAdmin(admin.ModelAdmin):
     list_display = ('shooter', 'match')
     list_filter = ('shooter', 'match')
@@ -31,3 +35,4 @@ admin.site.register(Match, MatchAdmin)
 admin.site.register(Shooter, ShooterAdmin)
 admin.site.register(Result, ResultAdmin)
 admin.site.register(Participation, ParticipationAdmin)
+admin.site.register(Discipline, DisciplineAdmin)
