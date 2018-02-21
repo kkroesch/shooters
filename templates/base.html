@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Single-page CDN-based Bootstrap HTML Page">
     <meta name="author" content="Karsten Kroesch">
-    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+    <link rel="icon" href="/static/favicon.ico">
 
     <title>{% block meta_title %}{% endblock %}</title>
 
@@ -41,9 +41,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">First</a></li>
-            <li class=""><a href="second.html">Second</a></li>
-            <li class=""><a href="third.html">Third</a></li>
+            {% for item in menu %}
+            <li class="{{ menu.active }}"><a href="{{item.link}}">{{item.name}}</a></li>
+            {% endfor %}
           </ul>
         </div><!--/.nav-collapse -->
       </div>

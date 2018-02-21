@@ -56,7 +56,7 @@ class Match(models.Model):
         return '%s (%s)' % (self.name, self.match_date.isoformat())
 
     def get_absolute_url(self):
-        return reverse('event', kwargs={'pk': self.id})
+        return reverse('event_detail', kwargs={'pk': self.id})
 
     class Meta():
         verbose_name_plural = u'Matches'

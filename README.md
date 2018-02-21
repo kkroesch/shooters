@@ -8,6 +8,13 @@
 $ pipenv install --dev
 ```
 
+Run with 
+```bash
+gunicorn -c gunicorn.conf shooters.wsgi
+```
+
+For production use, have a look into `nginx.conf.example`.
+
 ## Environment variables
 
 These are common between environments. The `ENVIRONMENT` variable loads the correct settings, possible values are: `DEVELOPMENT`, `STAGING`, `PRODUCTION`.

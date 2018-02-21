@@ -9,7 +9,7 @@ urlpatterns = [
     path('login/', auth_views.login, name='login'),
     path('logout/', auth_views.logout, {'template_name': 'registration/logged_out.html'}, name='logout'),
     path('admin/', admin.site.urls),
-    path('ranking', include('ranking.urls')),
+    path('ranking/', include('ranking.urls')),
 ]
 
 if settings.DEBUG:

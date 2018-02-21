@@ -9,11 +9,12 @@ from .models import *
 
 
 class EventsView(ListView):
-    template_name = 'index.html'
+    """ Display events of today and in the near future. """
+    template_name = 'ranking/index.html'
     model = Match
     context_object_name = 'events'
     queryset = Match.objects \
-        .filter(match_date__gt=date.today()) \
+        .filter(match_date__gte=date.today()) \
         .order_by('match_date')[:5]
 
     def get_context_data(self, **kwargs):
@@ -23,7 +24,7 @@ class EventsView(ListView):
 
 
 class AllEventsView(EventsView):
-    template_name = 'ranking/match_list.html'
+    template_name = 'ranking/index.html'
     queryset = Match.objects.all() \
         .order_by('match_date')
 
@@ -38,9 +39,9 @@ class ResultView(ListView):
     context_object_name = 'results'
 
     def get_queryset(self):
-        event_id = self.kwargs['event_id']
+        event = self.kwargs['pk']
         queryset = super(ResultView, self).get_queryset() \
-            .filter(match_id=event_id) \
+            .filter(match_id=event) \
             .order_by('-count')
         return queryset
 
@@ -117,7 +118,7 @@ class EventFeed(ICalFeed):
     file_name = "event.ics"
 
     def items(self):
-        return Match.objects.filter(match_date__gt=date.today()).order_by('-match_date')
+        return Match.objects.filter(match_date__gte=date.today()).order_by('-match_date')
 
     def item_title(self, item):
         return item.name

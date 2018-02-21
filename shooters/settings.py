@@ -41,6 +41,11 @@ class Common(Configuration):
         'ranking',
     ]
 
+    MENU_ITEMS = [
+        { 'name': 'Ranglisten', 'link': '/ranking/' },
+        { 'name': 'Admin', 'link': '/admin/' },
+    ]
+
     MIDDLEWARE = [
         'django.middleware.security.SecurityMiddleware',
         'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -65,6 +70,7 @@ class Common(Configuration):
                     'django.template.context_processors.request',
                     'django.contrib.auth.context_processors.auth',
                     'django.contrib.messages.context_processors.messages',
+                    'context_processors.menu',
                 ],
             },
         },

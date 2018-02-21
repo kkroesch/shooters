@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
 
-{% block title %}Anlässe PSN{% endblock %}
+{% block meta_title %}Veranstaltungen{% endblock %}
+
+{% block title %}Veranstaltungen{% endblock %}
 
 {% block content %}
-    <h2>Alle Anlässe und Wettkämpfe</h2>
+    <p class="pull-right text-muted">
+        <a href="feed.ics">
+            <i class="glyphicon glyphicon-calendar"></i> iCal Download
+        </a>
+    </p>
 
     {% for event in events %}
-        <h3 class="page-header"><a href="/events/{{ event.id }}/">{{ event.name }}</a></h3>
+        <h3 class="page-header">{{ event.name }}</a></h3>
         <p class="text-muted">{{ event.description }}</p>
         <p>
             <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> {{ event.match_date | date:'d.m.Y' }}
@@ -16,7 +22,8 @@
             <b>Schützenmeister:</b> {{ event.supervisor | default:"N.N." }}
         </p>
         {% if event.results.count > 0 %}
-        <p><a href="{% url 'result_detail' event_id=event.id %}">Resultate</a></p>
+        <p><a href="{% url 'result_detail' pk=event.id %}">Resultate</a></p>
         {% endif %}
     {% endfor %}
+    <a href="all">Alle Veranstaltungen anzeigen</a>
 {% endblock %}
