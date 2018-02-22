@@ -5,9 +5,9 @@
 {% block title %}Veranstaltungen{% endblock %}
 
 {% block content %}
-    <p class="pull-right text-muted">
+    <p class="right text-muted">
         <a href="feed.ics">
-            <i class="glyphicon glyphicon-calendar"></i> iCal Download
+            <i class="fas fa-calendar-alt"></i> iCal Download
         </a>
     </p>
 
@@ -15,7 +15,7 @@
         <h3 class="page-header">{{ event.name }}</a></h3>
         <p class="text-muted">{{ event.description }}</p>
         <p>
-            <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> {{ event.match_date | date:'d.m.Y' }}
+            <i class="fas fa-calendar-alt"></i> {{ event.match_date | date:'d.m.Y' }}
             <span class="text-muted">{{ event.organizer }}</span>
         </p>
         <p>
