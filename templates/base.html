@@ -11,8 +11,10 @@
 
     <title>{% block meta_title %}{% endblock %}</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
     <link href="/static/style.css" rel="stylesheet">
   </head>
 
@@ -23,7 +25,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarsExample09">
+        <div class="collapse navbar-collapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" href="/">Home</a>
@@ -33,8 +35,13 @@
               <a class="nav-link" href="{{item.link}}">{{item.name}}</a>
             </li>
             {% endfor %}
+          </ul>
+          <form class="form-inline my-2 my-md-0">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+          </form>
+          <ul class="navbar-nav">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+              <a class="nav-link dropdown-toggle" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{request.user.username}}</a>
               <div class="dropdown-menu" aria-labelledby="dropdown09">
                 <a class="dropdown-item" href="#">Action</a>
                 <a class="dropdown-item" href="#">Another action</a>
@@ -42,9 +49,6 @@
               </div>
             </li>
           </ul>
-          <form class="form-inline my-2 my-md-0">
-            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-          </form>
         </div>
       </nav>
 
@@ -59,11 +63,7 @@
 
     <script src="/static/jquery-3.2.1.slim.min.js"></script>
     <script src="/static/popper.min.js"></script>
-    <script src="/static/bootstrap.min.js"></script>
-    <script language="JavaScript">
-      $(function() {
-          // Your functionality goes here
-      })
-    </script>
+    <script src="/static/bootstrap.bundle.min.js"></script>
 
-</body></html>
+</body>
+</html>
