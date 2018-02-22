@@ -56,6 +56,12 @@ class MyResults(ListView):
     context_object_name = 'results'
     template_name = 'ranking/my_results.html'
 
+    def get(self, *args, **kwargs):
+        if self.request.user.is_superuser:
+            return redirect('/admin')
+        else:
+            return super(MyResults, self).get(*args, **kwargs)
+
     def get_queryset(self):
         return super(MyResults, self).get_queryset() \
                 .filter(shooter=self.request.user.shooter)
